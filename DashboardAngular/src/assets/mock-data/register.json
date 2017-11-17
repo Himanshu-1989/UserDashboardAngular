@@ -1,0 +1,17 @@
+
+[
+  {
+  "userId":1,  
+  "userName":"jatin",
+  "userPassword":"1232323",
+  "userStatus":"Active"  
+},
+{
+  "userId":2,  
+  "userName":"Himanshu",
+  "userPassword":"1232323",
+  "userStatus":"Active" ,
+  "userEmail":"him@gmail.com" 
+}
+ ]
+  

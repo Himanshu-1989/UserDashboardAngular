@@ -1,0 +1,91 @@
+.mainForm{ background-color:  #eee}
+
+.tbmain{
+    border:1px; border-style:solid;
+}
+.mainForm{ margin-top:4%; box-shadow: 10px 10px 44px #888888; border-style:hidden;border-color:#888888}
+
+.back{margin-top: 3px;
+    display: inline-block;
+    position: absolute;}
+
+.mainAddDiv{
+    border-style: solid!important;
+    border-color: darkgray!important;
+    border:1px!important;
+    border-width: 1px!important;
+    box-shadow: 10px 10px 44px #888888!important;
+    
+}
+
+.bgColor{
+    background-color:#0F3C6D!important;
+}
+
+.searchInput{
+    width: 146px!important;
+    border: 1px!important;
+    border-color: lightgray!important;
+    border-style: solid!important;
+    height: 20px!important;
+    padding-top: 10px!important;
+    background-color: white!important;
+    font-weight:100;
+
+}
+
+.inputtext{
+    margin-left:2%!important;width:50%!important;
+}
+
+.icons{
+    color: black;font-weight: 900;
+}
+
+.providerList{
+
+    color:black;font-size:24px;font-family:arial;font-weight:700;
+    margin-left:1%
+}
+.meaningFull{
+    color: white;
+    font-size: 47px;
+    font-family: arial;
+    font-weight: 700;
+    position: absolute;
+    margin-top: -9%;
+    margin-left: 3%;
+}
+
+.searchIcon{color: white !important;
+    background-color: #0071BC!important;
+    height: 24px!important;
+    padding-top: 3px!important;
+    margin-top: 6px!important;
+    position: absolute!important;
+    margin-left:-2%!important;
+
+}
+
+
+.ng2-smart-th id.ng2-smart-title{
+    
+        border: 1px!important;
+        border-style: solid!important;
+        text-align: center!important;
+        box-shadow: 10px 10px 44px #888888; border-style:hidden;border-color:#888888;
+    }
+    .ng2-smart-title{
+        
+            border: 1px!important;
+            border-style: solid!important;
+            text-align: center!important;
+            box-shadow: 10px 10px 44px #888888; border-style:hidden;border-color:#888888;
+        }
+        .ng2-smart-th.ng2-smart-title{
+            
+                border: 1px!important;
+                border-style: solid!important;
+                text-align: center!important;
+                box-shadow: 10px 10px 44px #888888; border-style:hidden;border-color:#888888;
+            }

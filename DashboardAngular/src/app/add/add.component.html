@@ -1,0 +1,96 @@
+<div style="margin-left:11%;width:78%" class="col-md-9 col-md-offset-3 mainAddDiv ">
+    <div>
+        <img style="width:100%" [src]="providerImage" />
+        <span class="meaningFull">UserDashboard</span>
+
+        <div class="stepsBody">
+            <div style="cursor:pointer" (click)="back()">
+                <i class="material-icons">arrow_back</i>
+                <span class="back">Back</span>
+            </div>
+
+
+
+            <div *ngIf="commonServiceComponent.action=='add'" class="col-md-6 col-md-offset-3">
+                <h2>Add User</h2>
+                <form *ngIf="commonServiceComponent.action=='add'" name="form" (ngSubmit)="f.form.valid && add()" #f="ngForm" novalidate>
+
+
+                    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
+                        <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+                    </div>
+
+                    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !lastName.valid }">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" required />
+                        <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last Name is required</div>
+                    </div>
+
+                    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" [(ngModel)]="model.email" ngModel [email]=true #email="ngModel" required
+                        />
+                        <div *ngIf="f.submitted && !email.valid" class="help-block">Email is required</div>
+                    </div>
+                    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+                        <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+                    </div>
+                    <div class="form-group">
+                        <button  [disabled]="loading" class="btn btn-primary bgColor">Submit</button>
+
+                        <a  [routerLink]="['/register']" class="btn btn-link bgColor">Back</a>
+                    </div>
+
+                </form>
+            </div>
+
+
+
+            <div *ngIf="commonServiceComponent.action=='modify'" class="col-md-6 col-md-offset-3">
+                <h2>Update User</h2>
+                <form *ngIf="commonServiceComponent.action=='modify'" name="form" (ngSubmit)="f.form.valid && update()" #f="ngForm" novalidate>
+
+
+                    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username" [(ngModel)]="model.username" #username="ngModel" required />
+                        <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+                    </div>
+
+                    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" required />
+                        <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last Name is required</div>
+                    </div>
+
+                    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" [(ngModel)]="model.email" #password="ngModel" required />
+                        <div *ngIf="f.submitted && !email.valid" class="help-block">Password is required</div>
+                    </div>
+
+
+
+
+                    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+                        <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+                    </div>
+                    <div class="form-group">
+                        <button  [disabled]="loading" class="btn btn-primary bgColor">Update</button>
+
+                        <a  [routerLink]="['/register']" class="btn btn-link bgColor">Back</a>
+                    </div>
+
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</div>

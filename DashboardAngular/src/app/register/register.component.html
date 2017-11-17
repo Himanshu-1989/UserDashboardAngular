@@ -1,0 +1,122 @@
+<div *ngIf="step1" style="margin-left:11%;width:78%" class="col-md-9 col-md-offset-3  ">
+    <div>
+        <img style="width:100%" [src]="providerImage" />
+        <span class="meaningFull">UserDashboard</span>
+
+        <div class="stepsBody">
+            <div style="cursor:pointer" (click)="back()">
+                <i class="material-icons">arrow_back</i>
+                <span class="back">Back to Login</span>
+            </div>
+
+            <div>
+                <br/>
+                <br/>
+
+
+                <br/>
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <span class="providerList">User List</span>
+                <i class="material-icons searchIcons">&#xE8B6;</i>
+                <input type="text" [(ngModel)]="searchby" placeholder="Search By Username...." (ngModelChange)="valuechange($event)" class="searchInput"
+                />
+
+                <span (click)="calladd()" style="float:right;cursor:pointer;">click to add user &nbsp;
+                    <i class="material-icons addIcon">add_circle_outline</i>
+                </span>
+
+                <br/>
+                <br/>
+
+                <div *ngIf="userResult" style="width: 95%;margin-left: 3%;">
+                    <ngx-datatable [rows]="userResult | FilterPipe : searchby" [headerHeight]="40" [limit]="4" [footerHeight]="50" [columnMode]="'force'"
+                        class="material" [rowHeight]="50">
+
+
+
+                        <ngx-datatable-column name="UserName" max-width="200">
+                            <template let-column="column" ngx-datatable-header-template>
+                                {{column.name}}
+                            </template>
+                            <template let-row="row" let-value="value" ngx-datatable-cell-template>
+                                {{row['userName']}}
+                            </template>
+                        </ngx-datatable-column>
+
+
+
+                        <ngx-datatable-column name="LastName">
+                            <template let-column="column" ngx-datatable-header-template>
+
+                                {{column.name}}
+                            </template>
+                            <template let-row="row" let-value="value" ngx-datatable-cell-template>
+                                {{row['userLastName']}}
+                            </template>
+                        </ngx-datatable-column>
+
+
+
+                        <ngx-datatable-column name="UserPassword" max-width="200">
+                            <template let-column="column" ngx-datatable-header-template>
+                                {{column.name}}
+                            </template>
+                            <template let-row="row" let-value="value" ngx-datatable-cell-template>
+                                {{row['userPassword']}}
+
+                            </template>
+                        </ngx-datatable-column>
+
+                        <ngx-datatable-column name="Email">
+                            <template let-column="column" ngx-datatable-header-template>
+
+                                {{column.name}}
+                            </template>
+                            <template let-row="row" let-value="value" ngx-datatable-cell-template>
+                                {{row['userEmail']}}
+                            </template>
+                        </ngx-datatable-column>
+
+
+
+
+
+
+
+
+
+                        <ngx-datatable-column name="Status">
+
+                            <template let-column="column" ngx-datatable-header-template>
+                                {{column.name}}
+
+                            </template>
+
+
+                            <template let-row="row" let-value="value" ngx-datatable-cell-template>
+                                <a class="bgcolors" (click)="modifyUser(row)">Modify</a> |
+                                <a class="bgcolors" (click)="delete(row)">Delete</a>
+
+                            </template>
+
+                        </ngx-datatable-column>
+
+                    </ngx-datatable>
+                    <br/>
+                    <br/>
+                </div>
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+</div>

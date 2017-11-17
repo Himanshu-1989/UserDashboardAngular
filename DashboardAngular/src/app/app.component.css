@@ -1,0 +1,35 @@
+a {
+    cursor: pointer;
+}
+
+.mainRow{
+
+    background-color: #0F3C6D!important;
+}
+
+.help-block {
+    font-size: 12px;
+}
+
+
+:host /deep/ ng2-smart-table tbody > tr > td { 
+	text-align: center; 
+    font-size: 15px;
+    color:darkslategray;
+    font-weight: 600;     
+}
+:host /deep/ ng2-smart-table thead > tr > th { 
+    border: 1px!important;
+    border-style: hidden!important;
+    text-align: center!important;
+    box-shadow: 10px 10px 44px #888888; border-style:hidden;border-color:#888888;
+    font-size:16px;
+         
+}
+.ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell{
+    background-color:lightgray!important;
+}
+.ngx-datatable.material{height: 256px!important;box-shadow: 0px!important;}
+.ngx-datatable.material .datatable-footer{
+    margin-top: 2%;
+}
