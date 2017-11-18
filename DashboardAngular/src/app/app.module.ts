@@ -15,7 +15,7 @@ import {GlobalUrl} from  './urlGlobal';
 import { HttpModule } from '@angular/http';
 import { MaterializeModule } from 'angular2-materialize';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-import {FilterPipe,FilterPipeCCN} from './commonpipe';
+import {FilterPipe} from './commonpipe';
 import {RegisterModel} from './registermodel';
 
 @NgModule({
@@ -24,8 +24,8 @@ import {RegisterModel} from './registermodel';
     LoginComponent,
     RegisterComponent ,
     AddComponent,
-    FilterPipe,
-    FilterPipeCCN
+    FilterPipe
+    
     
     
     

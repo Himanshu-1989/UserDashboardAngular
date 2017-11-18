@@ -16,8 +16,6 @@ import swal from 'sweetalert2'
 export class LoginComponent implements OnInit {
 
     model: any = {};
-    //userName: string;
-    //userPassword:string;
     userResult=[];
     blankUser:boolean;
     checkResult:boolean;
